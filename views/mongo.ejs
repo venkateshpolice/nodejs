@@ -1,0 +1,25 @@
+<html>
+<body>
+<table border="2" bgcolor="lightgreen">
+<tr>
+	<td>FirstName</td>
+	<td>Lastname</td>
+	<td>add</td>
+	<td>edit</td>
+	<td>delete</td>
+	<td>ViewData</td>
+	<tr>
+<% data.forEach(function(item){%>
+	<tr>
+	<td><%=item.fname%></td>
+	<td><%=item.lname%></td>
+	<td><a href="/add" >add</td>
+	<td><a href="/edit/<%=item._id%>" >edit</td>
+	<td><a href="/delete/<%=item._id%>" >delete</td>
+	<td><a href="/read" >View</td>
+	<tr>
+<%})%>
+<p></p>
+</table>
+</body>
+</html>
