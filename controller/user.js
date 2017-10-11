@@ -20,7 +20,7 @@ module.exports = function(app)
 
 			app.get('/',function(req,res)
 			{
-				console.log("error");
+				
 				//to get a data from mongodb
 				Todo.find({},function(err,data)
 				   {
@@ -112,13 +112,14 @@ module.exports = function(app)
 
 					Todo.find({fname:fn,lname:ln},function(err,data)
 					 {
-					 	console.log(req.body.fname);
+					 
 						if(data.length === 0)
 						{
 							console.log("notexistdatabase");
 						}
 						else
 						{
+                            console.log("ur logged successfully");
 							res.send("ur logged successfully");
 						}
 					});
