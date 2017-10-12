@@ -71,7 +71,7 @@ module.exports = function(app)
 
 			app.get('/edit/:id',function(req,res)
 			{
-				Todo.find({'_id':req.params.id},function(err,data)
+				Todo.findOne({'_id':req.params.id},function(err,data)
 				   {
 				   		if(err) throw err;
 				   		res.render('edit',{data:data});
